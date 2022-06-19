@@ -1,0 +1,325 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "petID",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "newhp",
+				"type": "uint256"
+			}
+		],
+		"name": "Attacked",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "CaptureFailed",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "CaptureSuccessful",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "Claimed",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "addNewAttacks",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "attackName",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "ownedID",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "opponentID",
+				"type": "uint256"
+			}
+		],
+		"name": "attack",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "attackNames",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"name": "attacks",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "opponentID",
+				"type": "uint256"
+			}
+		],
+		"name": "capture",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "claimMinerpet",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "imgURL",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "currhp",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "totalhp",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string[]",
+				"name": "attacksOwned",
+				"type": "string[]"
+			}
+		],
+		"name": "createMinerpet",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"name": "getCurrHP",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "ownedID",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "opponentID",
+				"type": "uint256"
+			}
+		],
+		"name": "heal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "pets",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "imgURL",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "maxhp",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "currenthp",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
