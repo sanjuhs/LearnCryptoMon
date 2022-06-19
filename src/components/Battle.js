@@ -139,7 +139,7 @@ function Battle({closeBattleHandler}) {
                     <button onClick={() => attack("superbeam")}
                     className="w-48 bg-cyan-100 rounded-xl px-4 py-2 my-4">Super beam</button>
 
-<button onClick={() => attack("capture")}
+                    <button onClick={capture}
                     className="w-48 bg-sky-500 rounded-xl px-4 py-2 my-4 text-white">Capture</button>
                     
                 </div>
