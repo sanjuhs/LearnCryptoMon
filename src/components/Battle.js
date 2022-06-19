@@ -28,11 +28,14 @@ function Battle({closeBattleHandler}) {
             if(petID_num == '0'){
                 myPet.currenthp = newHP_num;
                 changeMyHP(myPet.currenthp*100/myPet.maxhp);
+                
             }
             else{
                 opPet.currenthp = newHP_num;
                 changeOpHP(opPet.currenthp*100/opPet.maxhp);
+                
             }
+            getData();
         });
 
         tempContract.on("CaptureSuccessful",(id) =>{
@@ -120,8 +123,8 @@ function Battle({closeBattleHandler}) {
                             </div>
                            
                             <h1 className="text-base">{myPet.name}</h1>
-                            <div className="my-4 w-48 h-4 rounded-full bg-red-400 relative">
-                                <div style={{width:myHP+"%"}} className="absolute left-0 bottom-0 h-4 rounded-full bg-lime-300"></div>
+                            <div  className="my-4 w-48 h-4 rounded-full bg-red-400 relative">
+                                <div id="mypet" style={{width:myHP+"%"}} className="absolute left-0 bottom-0 h-4 rounded-full bg-lime-300"></div>
                             </div>
                         </div>
                     )
@@ -149,8 +152,8 @@ function Battle({closeBattleHandler}) {
                             </div>
                             
                             <h1 className="text-base">{opPet.name}</h1>
-                            <div className="my-4 w-48 h-4 rounded-full bg-red-400 relative">
-                                <div style={{width:opHP+"%"}} className="absolute left-0 bottom-0 h-4 rounded-full bg-lime-300"></div>
+                            <div  className="my-4 w-48 h-4 rounded-full bg-red-400 relative">
+                                <div id="oppet" style={{width:opHP+"%"}} className="absolute left-0 bottom-0 h-4 rounded-full bg-lime-300"></div>
                             </div>
                         </div>
                     )
